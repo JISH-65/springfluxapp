@@ -1,0 +1,17 @@
+apiVersion: image.toolkit.fluxcd.io/v1
+kind: ImageUpdateAutomation
+metadata:
+  name: springfluxapp-update
+  namespace: default
+spec:
+  interval: 1m
+  sourceRef:
+    kind: GitRepository
+    name: springfluxapp-repo
+  git:
+    commit:
+      author:
+        name: Flux Automation
+        email: flux@domain.com
+    push:
+      branch: main

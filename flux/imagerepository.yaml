@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: ImageRepository
+metadata:
+  name: springfluxapp-repo
+  namespace: default
+spec:
+  interval: 1m
+  image: jishanmulla977/springfluxapp

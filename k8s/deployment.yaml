@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springfluxapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springfluxapp
+  template:
+    metadata:
+      labels:
+        app: springfluxapp
+    spec:
+      containers:
+      - name: springfluxapp
+        image: jishanmulla977/springfluxapp:latest
+        ports:
+        - containerPort: 8080
